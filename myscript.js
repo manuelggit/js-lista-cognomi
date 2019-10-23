@@ -13,4 +13,17 @@ console.log(lista);
 var cognome = prompt('Scrivi il cognome');
 console.log(cognome);
 
+// Verifico che il cognome NON è presente
+
+var i = 0;
+while(i < lista.lenght){
+  // codice da eseguire
+  console.log(lista[i]);
+  // istruzioni per terminare il ciclo
+  i++;
+}
+
+
+
+
 // inseriscilo in un array con altri cognomi
