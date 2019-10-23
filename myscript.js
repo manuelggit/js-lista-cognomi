@@ -5,10 +5,12 @@
 
 // Creo un array con i cognomi
 
-var lista = ['Rossi', 'Verdi', 'Bianchi' 'Bellini', 'Rossini', 'Puccini']
+var lista = ['Rossi', 'Verdi', 'Bianchi', 'Bellini', 'Rossini', 'Puccini'];
+console.log(lista);
 
-// Chiedi all’utente il cognome
+// Chiedo all’utente il cognome
 
 var cognome = prompt('Scrivi il cognome');
+console.log(cognome);
 
 // inseriscilo in un array con altri cognomi
