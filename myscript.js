@@ -13,14 +13,25 @@ console.log(lista);
 var cognome = prompt('Scrivi il cognome');
 console.log(cognome);
 
-// Verifico che il cognome NON è presente
+// Verifico che il cognome NON sia presente
 
-var i = 0;
-while(i < lista.lenght){
-  // codice da eseguire
-  console.log(lista[i]);
-  // istruzioni per terminare il ciclo
-  i++;
+// var i = 0;
+// while(i < lista.lenght){
+//   // codice da eseguire
+//   console.log(lista[i]);
+//   if(cognome === lista[i]){
+//     console.log('Sei già in lista!');
+//     document.getElementById('js_mex').innerHTML = 'Sei già in lista!';
+//   }
+//   // istruzioni per terminare il ciclo
+//   i++;
+// }
+
+for (var i = 0; i < lista.lenght; i++) {
+  if(cognome === lista[i]){
+    console.log('sei già in lista');
+    document.getElementById('js_mex').innerHTML = 'sei già in lista';
+  }
 }
 
 
