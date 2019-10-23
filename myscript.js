@@ -27,11 +27,18 @@ console.log(cognome);
 //   i++;
 // }
 
+var cognomeOK = false;
+
 for (var i = 0; i < lista.lenght; i++) {
   if(cognome === lista[i]){
-    console.log('sei già in lista');
-    document.getElementById('js_mex').innerHTML = 'sei già in lista';
+    cognomeOK = true;
   }
+}
+
+if(cognomeOK){
+  document.getElementById('js_mex').innerHTML = 'sei già in lista';
+} else {
+  document.getElementById('js_mex').innerHTML = 'NON sei in lista';
 }
 
 
