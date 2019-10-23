@@ -19,13 +19,19 @@ var cognomeOK = false;
 
 var contenutoPrecedente;
 
-for (var i = 0; i < lista.length; i++) {
+var i = 0;
+while(i < lista.length && cognomeOK === false){
   contenutoPrecedente = document.getElementById('js_lista').innerHTML;
   console.log(contenutoPrecedente);
   document.getElementById('js_lista').innerHTML = contenutoPrecedente + '<li>' + lista[i] + '</li>';
+
   if(cognome === lista[i]){
     cognomeOK = true;
   }
+  console.log('la mia iterazione è arrivata a: ', i)
+  document.getElementById('posizione').innerHTML = 'Sei il numero ' + (i+1) + ' della lista';
+
+  i++
 }
 
 // Stampo il messaggio corrispondente
@@ -34,6 +40,8 @@ if(cognomeOK){
   document.getElementById('js_mex').innerHTML = 'sei già in lista';
 } else {
   document.getElementById('js_mex').innerHTML = 'NON sei in lista';
+  lista.push(cognome);
 }
 
-// inseriscilo in un array con altri cognomi
+var pos = lista.indexOf(cognome);
+console.log('Posizione nuovo cognome:', pos)
