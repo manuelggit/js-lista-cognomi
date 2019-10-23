@@ -17,7 +17,12 @@ console.log(cognome);
 
 var cognomeOK = false;
 
-for (var i = 0; i < lista.lenght; i++) {
+var contenutoPrecedente;
+
+for (var i = 0; i < lista.length; i++) {
+  contenutoPrecedente = document.getElementById('js_lista').innerHTML;
+  console.log(contenutoPrecedente);
+  document.getElementById('js_lista').innerHTML = contenutoPrecedente + '<li>' + lista[i] + '</li>';
   if(cognome === lista[i]){
     cognomeOK = true;
   }
@@ -30,9 +35,5 @@ if(cognomeOK){
 } else {
   document.getElementById('js_mex').innerHTML = 'NON sei in lista';
 }
-
-
-
-
 
 // inseriscilo in un array con altri cognomi
